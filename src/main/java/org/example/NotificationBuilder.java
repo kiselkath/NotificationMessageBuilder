@@ -32,17 +32,17 @@ public class NotificationBuilder {
         StringBuilder sb = new StringBuilder();
 
         // TODO: Append "Hi <recipient>, " to the builder
-        sb.append("Hi " + recipient + ", ");
+        sb.append("Hi ").append(recipient).append(" ,"));
 
         // TODO: Append "your <event> was successful. "
-        sb.append("your " + event + " was successful!");
+        sb.append("your ").append(event).append(" was successful. ");
 
         // TODO: Generate current date and time as a formatted string
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         // TODO: Append "Timestamp: <datetime>. "
-        sb.append(" Timestamp: ").append(formatter.format(now)).append(".");
+        sb.append("Timestamp: ").append(formatter.format(now)).append(".");
         // TODO: Return the final string from the builder
         return sb.toString();
     }
@@ -59,17 +59,20 @@ public class NotificationBuilder {
         StringBuffer sb = new StringBuffer();
 
         // TODO: Append "Hello <recipient>, " to the buffer
-        sb.append("Hello " + recipient + ", ");
+        sb.append("Hello ").append(recipient).append(", ");
 
         // TODO: Append "this is to inform you that your <event> has been completed. "
-        sb.append("this is a notification to inform you that your " + event + " has been completed. " );
+        sb.append("this is to inform you that your ")
+                .append(event)
+                .append(" has been completed. ");
 
         // TODO: Generate a timestamp string in a readable format
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE MMM dd yyyy HH:mm:ss");
 
         // TODO: Append "Generated at: <timestamp>. "
-        sb.append("Generated at: " + formatter.format(now) + ".");
+        sb.append("Generated at: ").append(formatter.format(now)).append(".");
+
         // TODO: Return the final string from the buffer
         return sb.toString();
     }
