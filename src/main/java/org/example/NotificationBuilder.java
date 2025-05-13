@@ -32,7 +32,7 @@ public class NotificationBuilder {
         StringBuilder sb = new StringBuilder();
 
         // TODO: Append "Hi <recipient>, " to the builder
-        sb.append("Hi ").append(recipient).append(" ,"));
+        sb.append("Hi ").append(recipient).append(" ,");
 
         // TODO: Append "your <event> was successful. "
         sb.append("your ").append(event).append(" was successful. ");
